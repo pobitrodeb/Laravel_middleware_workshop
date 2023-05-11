@@ -11,7 +11,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h1>This is Home Page</h1>
+                <h1>This is Dashboard Page</h1>
                 <a class="btn btn-primary" href="{{ route('about') }}"> About </a>
                 <a class="btn btn-primary" href="{{ route('contact') }}"> Contact </a>
                 <a class="btn btn-primary" href="{{ route('dashboard') }}"> Dashbaord </a>
