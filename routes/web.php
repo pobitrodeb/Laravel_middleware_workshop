@@ -18,12 +18,14 @@ use Faker\Guesser\Name;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact')->middleware('checkAge');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/not_match_middleware_credential', [HomeController::class, 'notMatchPage'])->name('not_match_middleware_credential');
 
 
 
 Route::group(['prefix' => '/admin', 'middleware'=> 'checkAge'],function(){
-
-});Route::get('/dashboard',[DashbaordController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard',[DashbaordController::class, 'index'])->name('dashboard');
+});
 

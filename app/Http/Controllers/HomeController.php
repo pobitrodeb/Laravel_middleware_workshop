@@ -18,4 +18,8 @@ class HomeController extends Controller
     {
         return view('contact');
     }
+    public function notMatchPage()
+    {
+        return view('not_match_middleware_credential');
+    }
 }

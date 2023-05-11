@@ -16,8 +16,13 @@ class CheckAgeMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->checkAge <= 25 ){
-            return redirect('about');
+        if($request->checkAge < 25 ){
+            // return redirect('about');
+            return redirect('not_match_middleware_credential');
+
+        }
+        else{
+
         }
 
         return $next($request);
