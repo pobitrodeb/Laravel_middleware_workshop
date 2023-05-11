@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashbaordController;
+use App\Http\Controllers\HomeController;
+use Faker\Guesser\Name;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact')->middleware('checkAge');
+
+
+
+Route::group(['prefix' => '/admin', 'middleware'=> 'checkAge'],function(){
+
+});Route::get('/dashboard',[DashbaordController::class, 'index'])->name('dashboard');
+

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>home</title>
+    <title>Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
@@ -11,9 +11,9 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h1>This is Home Page</h1>
+                <h1>This is Contact Page</h1>
+                <a class="btn btn-primary" href="{{ route('home') }}"> Home </a>
                 <a class="btn btn-primary" href="{{ route('about') }}"> About </a>
-                <a class="btn btn-primary" href="{{ route('contact') }}"> Contact </a>
                 <a class="btn btn-primary" href="{{ route('dashboard') }}"> Dashbaord </a>
             </div>
         </div>
