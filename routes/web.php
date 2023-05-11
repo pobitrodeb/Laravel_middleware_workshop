@@ -18,7 +18,7 @@ use Faker\Guesser\Name;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/not_match_middleware_credential', [HomeController::class, 'notMatchPage'])->name('not_match_middleware_credential');
